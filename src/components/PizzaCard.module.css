@@ -1,0 +1,35 @@
+.card {
+  background-color: white;
+  display: flex;
+}
+
+.image {
+  width: 50%;
+}
+
+.image img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  width: 50%;
+  padding: 1rem;
+}
+
+.content h5 {
+  font-size: 1.4rem;
+}
+
+.description {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 1.3rem;
+  color: blue;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
