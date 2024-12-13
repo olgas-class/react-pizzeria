@@ -1,11 +1,15 @@
 import style from "./PizzaCard.module.css";
 import PrimaryButton from "./PrimaryButton";
 
-function PizzaCard({ image, title, description, price, available }) {
+function PizzaCard({ image, title, description, price, available, vegetarian }) {
   const imagePath = `/images/${image}`;
 
+  // se CSS è tutto globale facciamo così
+  // const cardClass = `card ${vegetarian ? 'vegetariana' : 'normale'}`;
+  const cardClass = `${style.card} ${vegetarian ? style.vegetariana : style.normale}`;
+
   return (
-    <div className={style.card}>
+    <div className={cardClass}>
       {/* Card Image */}
       <div className={style.image}>
         <img src={imagePath} alt="" />

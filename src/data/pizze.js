@@ -6,6 +6,7 @@ const pizzas = [
     description: "Tomato sauce, mozzarella & oregano",
     price: "€ 6.00",
     available: true,
+    vegetarian: true
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const pizzas = [
     description: "Tomato sauce, mozzarella & mild salami",
     price: "€ 8.00",
     available: true,
+    vegetarian: false
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ const pizzas = [
       "TomaTomato sauce, mozzarella, chicken, pineapple* & bbq sauce",
     price: "€ 10.00",
     available: true,
+    vegetarian: false
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ const pizzas = [
     description: "Tomato sauce, mozzarella, ham & pineapple",
     price: "€ 10.00",
     available: false,
+    vegetarian: false
   },
 ];
 

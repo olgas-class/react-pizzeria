@@ -13,6 +13,7 @@ function AppMain() {
           description={curPizza.description}
           price={curPizza.price}
           available={curPizza.available}
+          vegetarian={curPizza.vegetarian}
         />
       </div>
     ));
