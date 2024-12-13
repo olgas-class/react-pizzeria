@@ -1,13 +1,23 @@
 import style from "./PrimaryButton.module.css"
 
-function PrimaryButton() {
-  const buttonText = "Add to Cart";
+function PrimaryButton({text}) {
+  // props è un oggetto
+  /**
+   * props = {
+   *  text: "Login",
+   * }
+   * 
+   */
+
+  // const {text} = props; 
+  
 
   return (
     <button className={style.button}>
-      {buttonText}
+      {text}
     </button>
   )
 }
+
 
 export default PrimaryButton;

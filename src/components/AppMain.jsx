@@ -1,11 +1,36 @@
 import PizzaCard from "./PizzaCard";
+import pizzasArray from "../data/pizze";
 
 function AppMain() {
-  const pizzas = [1, 2, 3, 4, 5,6];
+  const isBlackFirday = true;
+
+  const printPizzas = () => {
+    return pizzasArray.map((curPizza) => (
+      <div className="col" key={curPizza.id}>
+        <PizzaCard
+          image={curPizza.image}
+          title={curPizza.title}
+          description={curPizza.description}
+          price={curPizza.price}
+          available={curPizza.available}
+        />
+      </div>
+    ));
+  };
+
+  const printEmptyState = () => <p>Non ci sono le pizze che cerchi!</p>;
+
+  const printBlackFridayBanner = () => (
+    <section className="mb-2 text-center">
+      OGGI é il BLACK FRIDAY! Sconto 50% su tutte le pizze
+    </section>
+  );
 
   return (
     <main>
       <div className="container">
+        {isBlackFirday && printBlackFridayBanner()}
+
         <section className="text-center mb-2">
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis
@@ -17,23 +42,11 @@ function AppMain() {
 
         <section>
           <div className="row">
-            {pizzas.map((curPizza) => (
-              <div className="col">
-                <PizzaCard />
-              </div>
-            ))}
-            {/* <div className="col">
-              <PizzaCard />
-            </div>
-            <div className="col">
-              <PizzaCard />
-            </div>
-            <div className="col">
-              <PizzaCard />
-            </div>
-            <div className="col">
-              <PizzaCard />
-            </div> */}
+            {/* Se l'array non è vuoto
+              stampo le pizze
+            Altrimenti
+              stampo empty state message */}
+            {pizzasArray.length > 0 ? printPizzas() : printEmptyState()}
           </div>
         </section>
       </div>
